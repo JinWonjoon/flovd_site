@@ -166,14 +166,14 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video Results</h2>
+        <h2 class="title is-3">Fast Forward</h2>
         <div class="publication-video">
-          <iframe src="./FloVD_files/FloVD_Video_Results.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+          <iframe src="./FloVD_files/fast_forward.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
         </div>
       </div>
-    </div> -->
+    </div>
     <!--/ Paper video. -->
   </div>
 </section>
@@ -198,8 +198,6 @@
             <!-- <li>FloVD leverages optical flow maps to represent <strong>motions of the camera and moving objects.</strong></li> -->
           </ul>
         </div>
-    
-    
       </div>
     </div>
     
@@ -245,14 +243,14 @@
           <div class="container">
             <h2 class="section-title">Video synthesis results with complex camera trajectories</h2>
             <div class="video-container">
-              <video controls>
+              <video autoplay muted loop playsinline>
                 <source src="./FloVD_files/camera_control_1.mp4" type="video/mp4">
               </video>
-              <video controls>
+              <video autoplay muted loop playsinline>
                 <source src="./FloVD_files/camera_control_2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <video controls>
+              <video autoplay muted loop playsinline>
                 <source src="./FloVD_files/camera_control_3.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -265,15 +263,15 @@
           <div class="container">
             <h2 class="section-title">Video synthesis results with natural object motions (with 'stop' camera motion)</h2>
             <div class="video-container">
-              <video controls>
+              <video autoplay muted loop playsinline>
                 <source src="./FloVD_files/natural_motion_1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <video controls>
+              <video autoplay muted loop playsinline>
                 <source src="./FloVD_files/natural_motion_2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <video controls>
+              <video autoplay muted loop playsinline>
                 <source src="./FloVD_files/natural_motion_3.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -286,20 +284,20 @@
           <div class="container">
             <h2 class="section-title">Application: Video synthesis results with dolly zoom</h2>
             <div class="video-container">
-              <video controls>
+              <video autoplay muted loop playsinline>
                 <source src="./FloVD_files/dolly_zoom_1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <video controls>
+              <video autoplay muted loop playsinline>
                 <source src="./FloVD_files/dolly_zoom_5.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <video controls>
+              <video autoplay muted loop playsinline>
                 <source src="./FloVD_files/dolly_zoom_4.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
-            <p> <strong>Note</strong>: Second and Third examples are derivative works synthesized by FloVD using images from the internet.
+            <p> <strong>Note</strong>: Second and third examples are derivative works synthesized by FloVD using images from the internet.
             </br>Those examples will be deleted if there is a copyright issue.</p>
           </div>
         </section>
@@ -312,22 +310,22 @@
               (Left) Input video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Right) Edited video
             </p>
             <div class="video-container">
-              <video controls>
+              <video autoplay muted loop playsinline>
                 <source src="./FloVD_files/video_editing_before_1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <video controls>
+              <video autoplay muted loop playsinline>
                 <source src="./FloVD_files/video_editing_after_1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
             </br>
             <div class="video-container">
-              <video controls>
+              <video autoplay muted loop playsinline>
                 <source src="./FloVD_files/video_editing_before_2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <video controls>
+              <video autoplay muted loop playsinline>
                 <source src="./FloVD_files/video_editing_after_2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -351,7 +349,9 @@
         <div class="content has-text-justified">
           <p>
             <ul>
-              <li>Code will be released soon!</li> 
+              <li>Our paper is accepted to CVPR 2025</li> 
+              <li>Code will be released soon</li> 
+              <li>A variant model using CogVideoX will be released soon</li> 
             </ul>
           </p>
         </div>
@@ -401,6 +401,24 @@
     justify-content: center;  /* 가운데 정렬 */
     gap: 5px;  /* 비디오 사이 간격 */
     flex-wrap: wrap; /* 화면이 작으면 자동 줄바꿈 */
+  }
+
+  .video-container_half {
+    width: 50%; /* 왼쪽 절반 차지 */
+    height: 100vh;
+    background-color: #000; /* 비디오 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-container_half {
+    width: 50%; /* 오른쪽 절반 */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f4f4f4; /* 배경색 */
   }
 
   /* 캡션 스타일 */
